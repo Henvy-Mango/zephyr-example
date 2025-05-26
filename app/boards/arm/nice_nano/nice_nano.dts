@@ -13,6 +13,8 @@
     compatible = "nice,nano";
 
     chosen {
+		zephyr,console = &cdc_acm_uart_0;
+		zephyr,shell-uart = &cdc_acm_uart_1;
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
@@ -65,9 +67,17 @@
 };
 
 zephyr_udc0: &usbd {
-    status = "okay";
-};
+	compatible = "nordic,nrf-usbd";
+	status = "okay";
 
+	cdc_acm_uart_0: cdc_acm_uart_0 {
+		compatible = "zephyr,cdc-acm-uart";
+	};
+
+    cdc_acm_uart_1: cdc_acm_uart_1 {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};
 
 &flash0 {
     /*

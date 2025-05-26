@@ -3,5 +3,3 @@ board:
   vendor: arm
   socs:
   - name: nrf52840
-    variants:
-    - name: uf2

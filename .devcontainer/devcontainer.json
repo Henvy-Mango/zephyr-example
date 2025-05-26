@@ -1,0 +1,30 @@
+{
+    "name": "ZephyrDevcontainer",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    // Needed for USB devices in container
+    "privileged": true,
+    // Mount and set workspace folder
+    "workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspace,type=bind",
+    "workspaceFolder": "/workspace",
+    // Username in container - align with Dockerfile
+    "remoteUser": "user",
+    "mounts": [
+        // Persist installed extensions in container
+        "source=zephyr-devcontainer-extensions,target=/home/user/.vscode-server/extensions,type=volume",
+        // Allow attaching USB devices to running container
+        "source=/dev,target=/dev,type=bind"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.vscode-embedded-tools",
+                "ms-vscode.vscode-serial-monitor",
+                "ms-python.python",
+                "marus25.cortex-debug"
+            ]
+        }
+    }
+}

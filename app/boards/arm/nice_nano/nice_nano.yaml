@@ -1,5 +1,5 @@
-identifier: nice_nano_v2
-name: nice!nano v2
+identifier: nice_nano
+name: nice!nano
 type: mcu
 arch: arm
 toolchain:

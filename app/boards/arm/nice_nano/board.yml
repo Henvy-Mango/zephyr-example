@@ -1,5 +1,5 @@
 board:
-  name: nice_nano_v2
+  name: nice_nano
   vendor: arm
   socs:
   - name: nrf52840

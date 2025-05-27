@@ -4,15 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 
 config BOARD_ENABLE_DCDC
-	bool "DCDC mode"
-	select SOC_DCDC_NRF52X
-	default y
+    bool "Enable DCDC mode"
+    select SOC_DCDC_NRF52X
+    default y
+    depends on BOARD_NICE_NANO
 
 config BOARD_ENABLE_DCDC_HV
-	bool "High Voltage DCDC converter"
-	select SOC_DCDC_NRF52X_HV
-	default y
-
-config BOARD_SERIAL_BACKEND_CDC_ACM
-	bool "USB CDC"
-	default y
+    bool "High voltage DCDC converter"
+    select SOC_DCDC_NRF52X_HV
+    default y
+    depends on BOARD_NICE_NANO

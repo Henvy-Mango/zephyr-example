@@ -5,6 +5,9 @@
     },
     // Needed for USB devices in container
     "privileged": true,
+    "containerEnv": {
+        "WORKSPACE_DIR": "/workspace"
+    },
     // Mount and set workspace folder
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
     "workspaceFolder": "/workspace",

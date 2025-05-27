@@ -45,5 +45,7 @@ RUN usermod -aG dialout user
 # Make 'user' default on launch
 USER user
 
+RUN echo 'if [ -f "$WORKSPACE_DIR/zephyr/zephyr-env.sh" ]; then source "$WORKSPACE_DIR/zephyr/zephyr-env.sh"; fi' >> ~/.bashrc
+
 # Launch bash shell by default
 CMD ["/bin/bash"]

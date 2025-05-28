@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "input-event-codes.h": "c",
+        "ostream": "c",
+        "sensor.h": "c",
+        "device.h": "c",
+        "__assert.h": "c"
+    }
+}

@@ -46,10 +46,19 @@
 };
 
 &i2c0 {
+    status = "okay";
+
     compatible = "nordic,nrf-twi";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
+
+    mpr121:mpr121@5a {
+		reg = <0x5a>;
+
+        status = "okay";
+        label = "mpr121";
+	};
 };
 
 &spi1 {

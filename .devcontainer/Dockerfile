@@ -38,7 +38,6 @@ VOLUME ["/workspace"]
 # Adjust 'user' home directory permissions
 USER root
 RUN chown -R user:user /home/user
-RUN west completion bash > /etc/bash_completion.d/west-completion.bash
 
 # Add 'user' to groups to access USB devices
 RUN usermod -aG dialout user

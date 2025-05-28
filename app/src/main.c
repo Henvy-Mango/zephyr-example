@@ -3,11 +3,13 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
-
 #include <stdio.h>
 
-int main(void)
-{
-	printf("Hello World! %s\n", CONFIG_BOARD);
+#include "input_mpr121.h"
+
+int main(void) {
+
+	printf("MPR121 Initialization\n");
+
 	return 0;
 }

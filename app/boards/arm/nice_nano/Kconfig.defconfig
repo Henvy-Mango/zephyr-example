@@ -5,6 +5,9 @@
 
 if BOARD_NICE_NANO
 
+config BOARD
+    default "nice_nano"
+
 config USB_DEVICE_STACK
     default y
 

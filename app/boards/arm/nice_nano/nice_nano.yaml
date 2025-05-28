@@ -1,21 +1,15 @@
 identifier: nice_nano
-name: nice_nano
+name: nice!nano
 type: mcu
 arch: arm
-ram: 256
-flash: 1024
 toolchain:
   - zephyr
   - gnuarmemb
   - xtools
 supported:
   - adc
-  - ble
-  - counter
-  - gpio
-  - i2c
-  - pwm
-  - spi
   - usb_device
+  - ble
+  - ieee802154
+  - pwm
   - watchdog
-vendor: arm

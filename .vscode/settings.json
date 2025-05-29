@@ -5,5 +5,9 @@
         "sensor.h": "c",
         "device.h": "c",
         "__assert.h": "c"
-    }
+    },
+    "nrf-connect.applications": [
+        "${workspaceFolder}/app"
+    ],
+    "cmake.sourceDirectory": "/workspace/zephyr"
 }

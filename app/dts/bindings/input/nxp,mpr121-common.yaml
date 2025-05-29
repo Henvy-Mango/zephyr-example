@@ -1,0 +1,9 @@
+# Copyright (c) 2021 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+  An integration for the NXP MPR121 capacitive touch sensor.
+
+compatible: "nxp,mpr121"
+
+include: i2c-device.yaml

@@ -25,7 +25,6 @@
                 "ms-vscode.cpptools-extension-pack",
                 "ms-vscode.vscode-embedded-tools",
                 "ms-vscode.vscode-serial-monitor",
-                "ms-python.python",
                 "marus25.cortex-debug"
             ]
         }

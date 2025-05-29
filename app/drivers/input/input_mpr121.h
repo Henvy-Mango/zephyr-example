@@ -2,7 +2,6 @@
 
 #include <zephyr/device.h>
 #include <zephyr/drivers/i2c.h>
-#include <zephyr/drivers/spi.h>
 
 // I2C Settings
 #define MPR121_I2C_ADDRESS 0x5A
@@ -48,9 +47,6 @@
 #define MPR121_GPIOTOGGLE 0x7A
 
 #define MPR121_SOFTRESET 0x80
-
-#define INPUT_KEY_SLIDE_RIGHT 0x2F0  // スライド右方向
-#define INPUT_KEY_SLIDE_LEFT  0x2F1  // スライド左方向
 
 struct mpr121_data
 {

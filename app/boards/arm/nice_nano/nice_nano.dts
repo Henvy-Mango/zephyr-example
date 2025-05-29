@@ -13,8 +13,8 @@
     compatible = "nice,nano";
 
 	chosen {
-		zephyr,console = &cdc_acm_uart;
-		zephyr,shell-uart = &cdc_acm_uart;
+		// zephyr,console = &cdc_acm_uart;
+		// zephyr,shell-uart = &cdc_acm_uart;
 
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;

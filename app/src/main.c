@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
-
+#include <stdio.h>
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
 
@@ -13,6 +13,7 @@ LOG_MODULE_REGISTER(main);
 
 int main(void)
 {
+	printf("Hello, World!\n");
 	const struct device *const dev = DEVICE_DT_GET_ANY(mpr121);
 	
 	if(!device_is_ready(dev)) {
@@ -30,6 +31,6 @@ int main(void)
 	// 	LOG_INF("Found LED device %s", dev->name);
 	// }
 
-	LOG_INF("Testing");
+	LOG_INF("Testing","");
 	return 0;
 }

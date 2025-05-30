@@ -5,6 +5,7 @@
     },
     // Needed for USB devices in container
     "privileged": true,
+    "runArgs": ["--privileged"],
     "containerEnv": {
         "WORKSPACE_DIR": "/workspace"
     },
@@ -23,7 +24,6 @@
         "vscode": {
             "extensions": [
                 "ms-vscode.cpptools-extension-pack",
-                "ms-vscode.vscode-embedded-tools",
                 "ms-vscode.vscode-serial-monitor",
                 "marus25.cortex-debug"
             ]

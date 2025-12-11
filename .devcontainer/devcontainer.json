@@ -13,10 +13,10 @@
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
     "workspaceFolder": "/workspace",
     // Username in container - align with Dockerfile
-    "remoteUser": "user",
+    "remoteUser": "root",
     "mounts": [
         // Persist installed extensions in container
-        "source=zephyr-devcontainer-extensions,target=/home/user/.vscode-server/extensions,type=volume",
+        "source=zephyr-devcontainer-extensions,target=/root/.vscode-server/extensions,type=volume",
         // Allow attaching USB devices to running container
         "source=/dev,target=/dev,type=bind"
     ],

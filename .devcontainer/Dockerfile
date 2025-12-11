@@ -1,4 +1,4 @@
-FROM zephyrprojectrtos/ci:v0.26-branch
+FROM zephyrprojectrtos/ci:v0.28-branch
 
 # Set default to bash instead sh
 ENV SHELL /bin/bash

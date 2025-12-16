@@ -5,10 +5,4 @@
 
 if BOARD_NICE_NANO
 
-config USB_DEVICE_STACK
-    default y
-
-config HAS_BT_CTLR
-	default BT
-
 endif # BOARD_NICE_NANO

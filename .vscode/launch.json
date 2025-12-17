@@ -1,0 +1,39 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "pyocd debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "./app/build/zephyr/zephyr.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "pyocd",
+            "serverArgs": [
+                "--frequency=4000000",
+            ],
+            "targetId": "nrf52840",
+            "armToolchainPath": "/opt/zephyr-sdk-0.16.9/arm-zephyr-eabi/bin",
+            "toolchainPrefix": "arm-zephyr-eabi"
+        },
+        {
+            "name": "jlink Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "./app/build/zephyr/zephyr.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "jlink",
+            "serverArgs": [
+                // "--speed=4000",
+            ],
+            // "device": "nRF52840_xxAA",
+            "device": "rp2040",
+            "armToolchainPath": "/opt/zephyr-sdk-0.16.9/arm-zephyr-eabi/bin",
+            "toolchainPrefix": "arm-zephyr-eabi"
+        }
+    ]
+}

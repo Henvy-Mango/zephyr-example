@@ -5,6 +5,12 @@ ENV SHELL /bin/bash
 
 RUN mkdir -p /root/.vscode-server/extensions
 
+RUN apt update && apt install -y \
+    python3.12-venv usbutils linux-tools-virtual hwdata \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN update-alternatives --install /usr/local/bin/usbip usbip $(command -v ls /usr/lib/linux-tools/*/usbip | tail -n1) 20
+
 # Set working directory
 WORKDIR /workspace
 VOLUME ["/workspace"]
